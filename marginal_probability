@@ -1,3 +1,6 @@
+//Computer marginal probability over a variable in the given Bayesian / Markov network 
+//by using Bucket Elimination algorithm using Min Degree order.
+
 #include<iostream>
 #include<fstream>
 #include<map>
