@@ -1,5 +1,5 @@
-//Computer marginal probability over a variable in the given Bayesian / Markov network 
-//by using Bucket Elimination algorithm using Min Degree order.
+//Inference in the given Bayesian / Markov network 
+//by using Bucket Elimination algorithm with Min Degree order.
 
 #include<iostream>
 #include<fstream>
@@ -331,7 +331,7 @@ long double instantiate_evidence(vector<Factor*> &factors,map<int,int> evid_map)
 }
 
 
-Factor* new_multiply_factors1(vector<Factor*> factor,int eliminate,int f,map<int,int> evid_map){
+Factor* multiply_factors(vector<Factor*> factor,int eliminate,int f,map<int,int> evid_map){
 		vector<Factor*> target_factors;
 		vector<long double> target_table;
 		vector<Variable*> target_var;
@@ -600,7 +600,7 @@ int main(int argc,char** argv){
 		eliminated_list.push_back(eliminate);
 
 		//Multiply factors that has the variable 'e'
-		Factor* temp=new_multiply_factors1(factors,eliminate,factors.size(),evid_map);
+		Factor* temp=multiply_factors(factors,eliminate,factors.size(),evid_map);
 
 		//Sum out the variable 'e' from the resultant factor to find the marginal over remaining variables
 		temp=sum_factors(temp,eliminate);
