@@ -275,6 +275,7 @@ short** read_test_data(char* filename){
 		row++;
 	}
 	row--;
+	input.close();
 	return test_instances;
 }
 
@@ -372,6 +373,7 @@ int main(int argc,char **argv){
 		delete(test_instances[i]);
 	}	
 	delete(test_instances);
+	input.close();
 	return 0;
 }
 
