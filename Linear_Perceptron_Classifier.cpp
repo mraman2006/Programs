@@ -180,6 +180,7 @@ int main(int argc,char **argv){
 	count=find_accuracy(test_instances,COL,row);	
 	cout<<"Accuracy of Test data:"<<(float)count*100/row<<"\%\n";
 	
+	input.close();
 	return 0;
 }
 
