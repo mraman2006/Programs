@@ -158,5 +158,7 @@ int main(int argc, char** argv){
 		}
 		cout<<"\n";
     }
+    model.close();
+    test.close();
     return 0;
 }
