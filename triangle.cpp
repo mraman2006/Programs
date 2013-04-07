@@ -51,6 +51,7 @@ int main(){
 		cols++;
 	}
 	MAX_LEVEL = rows-1;
-	cout<<trisum(1,1);	
+	cout<<trisum(1,1);
+	input.close();
 	return 0;
 }
