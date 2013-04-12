@@ -18,7 +18,7 @@ Error between Exact inference and Approximate inference value
 */
 
 
-#include "normal_variable_elimination.h"
+#include "variable_elimination.h"
 #include "sampling.h"
 #include<utility>
 #include<ctime>
